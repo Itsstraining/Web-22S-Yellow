@@ -1,0 +1,42 @@
+<!-- <div class="container">
+    <h3>Tên:</h3>
+    <input matInput [(ngModel)]="this.name" />
+    <h3>Giá:</h3>
+    <input matInput [(ngModel)]="this.price" />
+    <h3>Mô tả:</h3>
+    <input matInput [(ngModel)]="this.decription" />
+    <br>
+    <button mat-raised-button (click)="this.addData()">Submit</button>
+</div> -->
+
+<form [formGroup]="form" (submit)="test()">
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Collection</mat-label>
+        <input formControlName="collectName" matInput placeholder="CollectionName">
+    </mat-form-field>
+    <!-- <mat-form-field appearance="legacy">
+        <mat-label>ID</mat-label>
+        <input formControlName="Id" matInput placeholder="ID ">
+    </mat-form-field> -->
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Name</mat-label>
+        <input formControlName="Name" matInput placeholder=" Game">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Price</mat-label>
+        <input formControlName="Price" matInput placeholder=" Price">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Quantity</mat-label>
+        <input formControlName="Quantity" matInput placeholder="Quantity">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Description</mat-label>
+        <input formControlName="Des" matInput placeholder="Des">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label style="color: black;">Image</mat-label>
+        <input formControlName="photoURL" matInput placeholder="Image">
+    </mat-form-field>
+    <button mat-raised-button>Add Item</button>
+</form>
